@@ -21,6 +21,14 @@ def takeControlGlobal(group, x=0, y=0):
             if shared.piles[p].controller != me:
                 shared.piles[p].controller = me
 
+def unanchorAll(group, x=0, y=0):
+    notify( me.name + " Unanchor all cards")
+    mute()
+	#Unanchor of each card on table
+    for card in table:
+        card.anchor = False
+
+
 def saveTable(group, x=0, y=0):
 	mute()
 	
